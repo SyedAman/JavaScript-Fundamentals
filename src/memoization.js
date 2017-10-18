@@ -1,4 +1,9 @@
 /**
+ * Demonstrates the usage of the "memoization" technique in JavaScript to
+ * optimize calculations by storing previous results and re-using them.
+ */
+
+/**
  * Recursively calculates the fibonacci number requested. 2 should return 1. 3
  * should return 2. 4 should return 3. 5 should return 5. 6 should return 8 etc.
  * @method fibonacci
@@ -12,9 +17,6 @@ function fibonacci (x) {
 
 // demonstrate fibonacci recursion
 fibonacci(10) // result: 55, called: 354 times
-
-
-
 
 /**
  * Stores the calculated fibonacci's for re-use.

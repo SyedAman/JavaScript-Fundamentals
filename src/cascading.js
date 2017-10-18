@@ -1,4 +1,9 @@
 /**
+ * Definition and demonstration of an object that can be modified using
+ * cascading, similar to JQuery for example.
+ */
+
+/**
  * Custom number class with its own modifying methods.
  * @method number
  * @param  {Number} initialValue - The initial value for the instance.

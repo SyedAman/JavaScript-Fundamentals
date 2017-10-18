@@ -1,5 +1,5 @@
 /**
- * Definition of the curry method.
+ * Definition and demonstration of the curry method.
  */
 
 /**
