@@ -25,3 +25,17 @@ Function.prototype.curry = function () {
     return that.apply(null, args.concat(...arguments))
   }
 }
+
+/**
+ * Calculates the sum of two numbers.
+ * @method add
+ * @param  {Number} x - The augend.
+ * @param  {Number} y - The addend.
+ */
+function add(x, y) {
+  return x + y
+}
+
+// demonstrate currying
+const add1 = add.curry(1)
+add1(5) // 6
