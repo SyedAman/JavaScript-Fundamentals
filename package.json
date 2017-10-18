@@ -1,0 +1,9 @@
+{
+  "name": "JavaScript-Fundamentals",
+  "version": "1.0.0",
+  "description": "Fundamentals of JavaScript",
+  "main": "index.js",
+  "repository": "https://github.com/SyedAman/JavaScript-Fundamentals.git",
+  "author": "Syed Aman <sna274@nyu.edu>",
+  "license": "MIT"
+}
