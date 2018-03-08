@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Event Delegation Example</title>
+    <meta charset="utf-8">
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const parentList = document.getElementById("parent-list");
+
+        // delegate event listening to the parent instead of individual children
+        parentList.addEventListener('click', event => {
+          const clickedElement = event.target;
+          if (clickedElement.classList.contains('list-item')) {
+            clickedElement.remove();
+          }
+        })
+      });
+    </script>
+  </head>
+
+  <body>
+    <ul id="parent-list">
+      <li class="list-item">Child 1 ❌</li>
+      <li class="list-item">Child 2 ❌</li>
+      <li class="list-item">Child 3 ❌</li>
+      <li class="list-item">Child 4 ❌</li>
+      <li class="list-item">Child 5 ❌</li>
+      <li class="list-item">Child 6 ❌</li>
+    </ul>
+  </body>
+</html>
