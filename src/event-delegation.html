@@ -6,12 +6,20 @@
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         const parentList = document.getElementById("parent-list");
+        let childCount = 6;
 
         // delegate event listening to the parent instead of individual children
         parentList.addEventListener('click', event => {
           const clickedElement = event.target;
           if (clickedElement.classList.contains('list-item')) {
             clickedElement.remove();
+          } else if (clickedElement.classList.contains('list-item-create')) {
+            // add list items
+            const newItem = document.createElement('li');
+            childCount += 1;
+            newItem.appendChild(document.createTextNode(`Child ${childCount} ❌`));
+            newItem.className = 'list-item';
+            parentList.appendChild(newItem);
           }
         })
       });
@@ -20,6 +28,7 @@
 
   <body>
     <ul id="parent-list">
+      <li class="list-item-create">Create Item! ➕</li>
       <li class="list-item">Child 1 ❌</li>
       <li class="list-item">Child 2 ❌</li>
       <li class="list-item">Child 3 ❌</li>
